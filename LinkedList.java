@@ -63,7 +63,48 @@ class nodeList {
         trackNode.next = null;
 
     }
+
+    public void deleteAtPosition(int position) {
+        System.out.println("Deleting node at position: " + position);
+    
+        if (position <= 0) {
+            System.out.println("Invalid position");
+            return;
+        }
+    
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+    
+        // Case 1: delete head node
+        if (position == 1) {
+            System.out.println("Deleted node: " + head.data);
+            head = head.next;
+            return;
+        }
+    
+        Node currNode = head;
+        int count = 1;
+    
+        // traverse to the (position - 1)th node
+        while (currNode != null && count < position - 1) {
+            currNode = currNode.next;
+            count++;
+        }
+    
+        // if position is out of bounds
+        if (currNode == null || currNode.next == null) {
+            System.out.println("Position out of bounds");
+            return;
+        }
+    
+        // delete the node
+        System.out.println("Deleted node: " + currNode.next.data);
+        currNode.next = currNode.next.next;
+    }
 }
+    
 
 public class LinkedList {
     public static void main(String[] args) {
@@ -76,6 +117,7 @@ public class LinkedList {
         list.deleteLastNode();
         list.deleteLastNode();
         list.deleteLastNode();
+        list.deleteAtPosition(2);
         list.displayList();
     }
 }
