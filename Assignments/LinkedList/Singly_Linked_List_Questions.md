@@ -1,7 +1,6 @@
 # Singly Linked List Practice Questions
 
 This document contains **7 important singly linked list questions** — ranging from easy to intermediate.  
-Each question includes a **detailed explanation** of what is being asked and what you are expected to do.
 
 ---
 
@@ -17,10 +16,6 @@ Given the head of a **sorted singly linked list**, remove all duplicates so that
 Input: 1 -> 1 -> 2 -> 3 -> 3
 Output: 1 -> 2 -> 3
 ```
-
-### Explanation:
-Since the list is sorted, duplicates will always be adjacent. Traverse the list once, compare the current node’s value with the next node’s value, and skip nodes that have duplicate values.
-
 ---
 
 ## 2. Find the Middle of the Linked List
@@ -40,10 +35,6 @@ Output: 3
 Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 Output: 4
 ```
-
-### Explanation:
-Use the **slow and fast pointer technique** — move one pointer twice as fast as the other. When the fast pointer reaches the end, the slow pointer will be at the middle.
-
 ---
 
 ## 3. Reverse a Linked List
@@ -58,11 +49,6 @@ Given the head of a singly linked list, reverse the list and return the new head
 Input: 1 -> 2 -> 3 -> 4 -> 5
 Output: 5 -> 4 -> 3 -> 2 -> 1
 ```
-
-### Explanation:
-Iteratively reverse the `next` pointer of each node so it points to the previous node instead of the next.  
-Keep track of three pointers — `prev`, `curr`, and `nextNode`.
-
 ---
 
 ## 4. Detect Cycle in a Linked List
@@ -77,10 +63,6 @@ Given the head of a linked list, determine if there is a **cycle** in it.
 Input: head = [3,2,0,-4], pos = 1 (tail connects to node index 1)
 Output: true
 ```
-
-### Explanation:
-Use **Floyd’s Cycle Detection Algorithm (Tortoise and Hare)** — two pointers move at different speeds.  
-If they ever meet, there’s a cycle. If the fast pointer reaches `null`, there’s no cycle.
 
 ---
 
@@ -119,9 +101,6 @@ Input: 1 -> 2
 Output: false
 ```
 
-### Explanation:
-Find the middle, reverse the second half, and compare both halves node by node.
-
 ---
 
 ## 7. Reverse Nodes in K-Group
@@ -154,7 +133,3 @@ Reverse the list in groups of k nodes using iterative or recursive approach. Kee
 - Don’t skip the edge cases like empty lists, single-node lists, or k > length of list.
 
 ---
-
-**Author:** Rajneesh Mishra  
-**Topic:** Singly Linked List Practice Questions  
-**License:** For learning and personal practice only.
